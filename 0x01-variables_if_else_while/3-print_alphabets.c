@@ -8,17 +8,17 @@
  */
 int main(void)
 {
-	char c = 'a';
-	char C = 'A';
+	char c;
+	char ch;
 
-	for (c <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
 
-	for (C <= 'Z'; C++)
+	for (ch = 'A'; ch <= 'Z'; ch++)
 	{
-		putchar(C);
+		putchar(ch);
 	}
 	putchar('\n');
 	return (0);
