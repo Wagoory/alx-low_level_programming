@@ -1,13 +1,13 @@
 #include "main.h"
 /**
  * print_alphabet_x10 - entry point
- * 
+ *
  * Description: prints alphabets in nested loop using while
  */
 void print_alphabet_x10(void)
 {
 	char ch;
-	int i;
+	int i = 0;
 
 	while (i < 10)
 	{
