@@ -6,7 +6,7 @@
  *
  * @b: second number
  *
- * return: returns new value of int a and b
+ * Return: returns new value of int a and b
  */
 int add(int a, int b)
 {
