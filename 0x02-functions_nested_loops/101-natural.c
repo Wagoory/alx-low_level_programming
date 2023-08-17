@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * description - computes sum
+ * description: computes sum
  *
  * Return: always 0
  */
