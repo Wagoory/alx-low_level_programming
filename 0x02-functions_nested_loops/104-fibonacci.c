@@ -25,8 +25,8 @@ int main(void)
 	g = c % 1000000000;
 	for (a = 92; a < 99; ++a)
 	{
-		printf(", %lu", f + (o / 1000000000));
-		printf("%lu", o % 1000000000);
+		printf(", %lu", f + (g / 1000000000));
+		printf("%lu", g % 1000000000);
 		f = f + d;
 		d = f - d;
 		g = g + e;
