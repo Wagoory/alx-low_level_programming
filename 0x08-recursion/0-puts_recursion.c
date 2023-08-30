@@ -1,5 +1,5 @@
 /**
- * _puts_recursion: prints string
+ * _puts_recursion - prints string
  * @s: string being printed
  * return: void
  */
@@ -11,6 +11,6 @@ void _puts_recursion(char *s)
 	else
 	{
 		_putchar(*s);
-		_puts_recursion(char s + 1);
+		_puts_recursion(s + 1);
 	}
 }
