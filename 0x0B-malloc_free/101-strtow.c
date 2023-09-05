@@ -4,4 +4,4 @@
 #include "word_check.c"
 
 /**
- * */
+ *  */

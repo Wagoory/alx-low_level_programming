@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include "_strlen.c"
 /**
  * *argstostr = concatinates all arguments
  * @ac: argc
