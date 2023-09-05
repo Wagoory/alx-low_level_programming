@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "_strlen.c"
 /**
- * *argstostr = concatinates all arguments
+ * *argstostr - concatinates all arguments
  * @ac: argc
  * @av: arguments
  * Return: pointer to a new string
