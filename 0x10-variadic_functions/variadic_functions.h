@@ -6,14 +6,13 @@
 
 /**
  * struct format_types - Struct format_types
- * @identifier: The conversion specifier
- * @f: The function pointer
+ * @symbol: symbol
+ * @print: print pointer
  */
-typedef struct format_types
-{
-	char *identifier;
-	void (*f)(char *separator, va_list args);
-} f_dt;
+typedef struct printer{
+char *symbol;
+void (*print)(va_list arg);
+} printer_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
