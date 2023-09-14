@@ -20,11 +20,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			int list = va_arg(args, int);
 
-			printf("%d ", list);
+			printf("%d", list);
 		}
 		printf("%s", separator);
 	}
 
-	printf('\n');
+	printf("\n");
 	va_end(args);
 }
