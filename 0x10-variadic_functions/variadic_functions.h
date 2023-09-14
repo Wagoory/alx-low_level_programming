@@ -4,9 +4,15 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-typedef struct printer{
-	char *symbol;
-	void (*print)(va_list arg);
+/**
+ * struct printer - checker struct
+ * @p: possibility
+ * @f: Function to be used
+ */
+typedef struct printer
+{
+	char *p;
+	void (*f)(va_list);
 } printer_t;
 
 
