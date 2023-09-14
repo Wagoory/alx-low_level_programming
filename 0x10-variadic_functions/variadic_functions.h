@@ -5,16 +5,15 @@
 #include <stdio.h>
 
 /**
- * struct printer - checker struct
- * @p: possibility
- * @f: Function to be used
+ * struct format_types - Struct format_types
+ * @identifier: The conversion specifier
+ * @f: The function pointer
  */
-typedef struct printer
+typedef struct format_types
 {
-	char *p;
-	void (*f)(va_list);
-} printer_t;
-
+	char *identifier;
+	void (*f)(char *separator, va_list args);
+} f_dt;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
