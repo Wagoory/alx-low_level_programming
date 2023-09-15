@@ -5,11 +5,12 @@
 #include <stdio.h>
 
 /**
- * struct format_types - Struct format_types
+ * struct printer - Struct printer
  * @symbol: symbol
  * @print: print pointer
  */
-typedef struct printer{
+typedef struct printer
+{
 char *symbol;
 void (*print)(va_list arg);
 } printer_t;
