@@ -1,1 +1,1 @@
-C programming
+C programming is fun
