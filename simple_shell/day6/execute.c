@@ -11,6 +11,7 @@ void execute(char **exev)
 		{
 			perror("exev[0]");
 			freearr(exev);
+			exit(0);
 		}
 	}
 	else
