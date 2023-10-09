@@ -7,7 +7,7 @@ void execute(char **exev)
 
 	if (pid == 0)
 	{
-		if(execve(exev[0], exev, NULL) == -1)
+		if(execve(exev[0], exev, environ) == -1)
 		{
 			perror("exev[0]");
 			freearr(exev);
