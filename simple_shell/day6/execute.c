@@ -9,7 +9,7 @@ void execute(char **exev)
 	{
 		if(execve(exev[0], exev, NULL) == -1)
 		{
-			perror(exev[0]);
+			perror("exev[0]");
 			freearr(exev);
 		}
 	}
