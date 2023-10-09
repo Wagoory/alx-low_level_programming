@@ -39,8 +39,12 @@ void execute(char *args[])
 int main()
 {
 	char *input = NULL;
+
 	size_t input_size = 0;
 	ssize_t bytes_read;
+	char *token = strtok(input, " ");
+	char *args[MAX_INPUT_SIZE / 2 + 1];
+	int i = 0;
 
 	while (1)
 	{
@@ -57,10 +61,6 @@ int main()
 		{
 			input[bytes_read - 1] = '\0';
 		}
-
-		char *token = strtok(input, " ");
-		char *args[MAX_INPUT_SIZE / 2 + 1];
-		int i = 0;
 
 		while (token != NULL)
 		{
@@ -86,4 +86,3 @@ int main()
 
 	return 0;
 }
-
