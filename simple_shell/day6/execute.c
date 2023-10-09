@@ -10,7 +10,7 @@ void execute(char **exev)
 		if(execve(exev[0], exev, environ) == -1)
 		{
 			perror("exev[0]");
-			free(exev);
+			freearr(exev);
 			exit(0);
 		}
 	}

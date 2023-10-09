@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 		if (!args)
 		{
-			free(args);
+			freearr(args);
 			return (-1);
 		}
 
