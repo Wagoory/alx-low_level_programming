@@ -10,5 +10,5 @@ char *get_line();
 char **token(char *user_command);
 void freearr(char **free_arg);
 void execute(char **exev);
-
+extern char **environ;
 #endif
