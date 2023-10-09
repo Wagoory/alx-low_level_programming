@@ -6,6 +6,7 @@ char **token(char *user_command)
 	const char *delim = " \n";
 	int count = 0, i = 0;
 
+	dupl = malloc(sizeof(char) * strlen(user_command));
 	dupl = strdup(user_command);
 	token = strtok(dupl, delim);
 
@@ -36,6 +37,7 @@ char **token(char *user_command)
 		i++;
 	}
 
+	free(user_command);
 	free(token);
 	args[i] = NULL;
 	return (args);
