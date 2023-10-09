@@ -11,7 +11,7 @@ char **token(char *user_command)
 
 	if (token == NULL)
 	{
-		free(token);
+		free(dupl);
 		free(user_command);
 		return (NULL);
 	}
@@ -28,7 +28,7 @@ char **token(char *user_command)
 		free(user_command);
 		return (NULL);
 	}
-	token = strtok(dupl, delim);
+	token = strtok(user_command, delim);
 	while (token != NULL)
 	{
 		args[i] = strdup(token);
@@ -36,7 +36,7 @@ char **token(char *user_command)
 		i++;
 	}
 
-	free(token);
+	free(user_command);
 	args[i] = NULL;
 	return (args);
 }
