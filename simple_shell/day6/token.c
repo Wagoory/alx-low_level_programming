@@ -36,7 +36,6 @@ char **token(char *user_command)
 		i++;
 	}
 
-	freearr(user_command);
 	free(token);
 	args[i] = NULL;
 	return (args);
