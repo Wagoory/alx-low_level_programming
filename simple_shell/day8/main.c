@@ -21,9 +21,7 @@ int main(void)
 		tokens = spilt_line(line);
 		
 		path = strdup(tokens[0]);
-		free(tokens[0]);
 		full_path = get_path(path);
-		tokens[0] = malloc(sizeof(full_path));
 		tokens[0] = path;
 
 		status = exec(tokens);
