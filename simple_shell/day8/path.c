@@ -36,6 +36,7 @@ void main()
 {
 	char *command = "ls";
 	char *fullpath = get_path(command);
+	free(fullpath);
 }
 /*int main()
 {
