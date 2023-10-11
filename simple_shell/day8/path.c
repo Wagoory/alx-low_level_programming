@@ -32,7 +32,7 @@ char *get_path(char *user_command)
 
 
 
-int main()
+/*int main()
 {
 	char *command = "ls";
 	char *fullpath = get_path(command);
@@ -40,7 +40,7 @@ int main()
 	
 	return(0);
 }
-/*int main()
+int main()
 {
 	char *current_path = getenv("PATH");
 	printf("%s\n", current_path);
