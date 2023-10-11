@@ -22,7 +22,7 @@ int main(void)
 		
 		path = strdup(tokens[0]);
 		full_path = get_path(path);
-		tokens[0] = path;
+		tokens[0] = full_path;
 
 		status = exec(tokens);
 
