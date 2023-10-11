@@ -22,7 +22,7 @@ int main(void)
 		
 		full_path = get_path(tokens[0]);
 		free(tokens[0]);
-		tokens[0] = malloc((full_path) * sizeof(char));
+		tokens[0] = malloc(sizeof(full_path));
 
 		strcpy(tokens[0], full_path);
 
