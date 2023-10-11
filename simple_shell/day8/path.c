@@ -5,16 +5,37 @@ char *get_path(char *user_command)
 	char *current_path = getenv("PATH");
 	char *token, *dupl;
 	char buff[256];
+	char *path = NULL;
 
 	if (current_path == NULL)
 		return (NULL);
 	
-	dupl = strdup(user_command);
+	dupl = strdup(current_path);
 	token = strtok(dupl, ":");
+
+	while(token)
+	{
+		strcpy(buff,token);
+		strcat(buff, "/");
+		strcat(buff, user_command);
+		if (access(buff, F_OX) == 0)
+		{
+			path = strdup(buff);
+			break;
+		}
+		
+		token = strtok(NULL, ":");
+	}
+	free(dupl);
+	return (path);
 }
-int main()
+
+
+
+
+/*int main()
 {
 	char *current_path = getenv("PATH");
 	printf("%s\n", current_path);
 	return (0);
-}
+}*/
