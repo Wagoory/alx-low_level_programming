@@ -5,7 +5,7 @@ int main(void)
 	char *line = NULL;
 	char **tokens = NULL;
 	int status = 0;
-	char *path, full_path;
+	char *path, *full_path;
 
 	while (1)
 	{
@@ -23,8 +23,8 @@ int main(void)
 		path = strdup(tokens[0]);
 		free(tokens[0]);
 		full_path = get_path(path);
-		token[0] = malloc(sizeof(full_path));
-		token[0] = path;
+		tokens[0] = malloc(sizeof(full_path));
+		tokens[0] = path;
 
 		status = exec(tokens);
 

@@ -18,7 +18,7 @@ char *get_path(char *user_command)
 		strcpy(buff,token);
 		strcat(buff, "/");
 		strcat(buff, user_command);
-		if (access(buff, F_OX) == 0)
+		if (access(buff, F_OK) == 0)
 		{
 			path = strdup(buff);
 			break;
