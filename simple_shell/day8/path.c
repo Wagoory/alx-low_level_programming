@@ -32,11 +32,13 @@ char *get_path(char *user_command)
 
 
 
-void main()
+int main()
 {
 	char *command = "ls";
 	char *fullpath = get_path(command);
 	free(fullpath);
+	
+	return(0);
 }
 /*int main()
 {
