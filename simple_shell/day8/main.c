@@ -5,7 +5,7 @@ int main(void)
 	char *line = NULL;
 	char **tokens = NULL;
 	int status = 0;
-	char *path, *full_path;
+	char *full_path;
 
 	while (1)
 	{
@@ -20,10 +20,10 @@ int main(void)
 		}
 		tokens = spilt_line(line);
 		
-		path = strdup(tokens[0]);
+		full_path = get_path(tokens[0]);
 		free(tokens[0]);
-		full_path = get_path(path);
-		tokens[0] = malloc(sizeof(full_path));
+		tokens[0] = malloc(full_path * sizeof(char));
+
 		strcpy(tokens[0], full_path);
 
 		status = exec(tokens);
