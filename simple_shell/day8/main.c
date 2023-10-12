@@ -31,7 +31,7 @@ int main(void)
 
 		free(tokens);
 		free(line);
-		free(path);
+		free(full_path);
 	}
 
 	return (status);
