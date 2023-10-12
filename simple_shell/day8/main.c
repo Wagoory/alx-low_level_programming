@@ -5,7 +5,6 @@ int main(void)
 	char *line = NULL;
 	char **tokens = NULL;
 	int status = 0;
-	char *full_path;
 
 	while (1)
 	{
