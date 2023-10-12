@@ -10,7 +10,7 @@
 
 char *read_line(void);
 char **spilt_line(char *new_line);
-int exec(char **args);
+int exec(char **args, char *path);
 extern char **environ;
 char *get_path(char *user_command);
 

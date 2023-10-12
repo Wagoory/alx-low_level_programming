@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-int exec(char **args)
+int exec(char **args, char *path)
 {
 	int status = 0;
 	pid_t id;
@@ -14,7 +14,7 @@ int exec(char **args)
 
 	if (id == 0)
 	{
-		if (execve(args[0], args, environ) == -1)
+		if (execve(path, args, environ) == -1)
 		{
 			perror(args[0]);
 			exit(127);
