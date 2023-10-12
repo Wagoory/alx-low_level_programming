@@ -3,9 +3,12 @@
 void full_path(char **tokens)
 {
         char *path = get_path(tokens[0]);
+	size_t length;
 
         free(tokens[0]);
-        tokens[0] = malloc(sizeof(path));
+	length = strlen(path);
+
+        tokens[0] = malloc((length + 1) * sizeof(char));
 
         strcpy(tokens[0], path);
         free(path);
