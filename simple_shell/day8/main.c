@@ -21,7 +21,7 @@ int main(void)
 		tokens = spilt_line(line);
 		
 		full_path = get_path(tokens[0]);
-		tokens[0] = malloc(sizeof(full_path));
+		tokens[0] = malloc(strlen(full_path) + 1);
 
 		strcpy(tokens[0], full_path);
 

@@ -1,16 +1,20 @@
 #include "main.h"
 
 
-/*int exec(char **args)
+int exec(char **args)
 {
 	int status = 0;
 	pid_t id;
+	char *exec_args[2];
+	
+	exec_args[0] = strdup(args[0]);
+	exec_args[1] = NULL;
 
 	id = fork();
 
 	if (id == 0)
 	{
-		if (execve(args[0], args, environ) == -1)
+		if (execve(exec_args[0], exec_args, environ) == -1)
 		{
 			perror(args[0]);
 			exit(127);
@@ -22,8 +26,9 @@
 		waitpid(id, &status, 0);
 	}
 	return (WEXITSTATUS(status));
-}*/
-int exec(char **args)
+}
+
+/*int exec(char **args)
 {
     int status = 0;
     pid_t id;
@@ -35,13 +40,13 @@ int exec(char **args)
         if (execve(args[0], args, environ) == -1)
         {
             perror("execve");
-            exit(1); /* Exit with an error code to indicate failure*/
+            exit(1);  Exit with an error code to indicate failure
         }
     }
     else if (id < 0)
     {
         perror("fork");
-        exit(1); /* Exit with an error code to indicate failure*/
+        exit(1);  Exit with an error code to indicate failure
     }
     else
     {
@@ -53,5 +58,4 @@ int exec(char **args)
     }
 
     return status;
-}
-
+}*/
