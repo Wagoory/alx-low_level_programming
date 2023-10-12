@@ -5,16 +5,16 @@ int exec(char **args)
 {
 	int status = 0;
 	pid_t id;
-	char *exec_args[2];
+	/*char *exec_args[2];
 	
 	exec_args[0] = strdup(args[0]);
-	exec_args[1] = NULL;
+	exec_args[1] = NULL;*/
 
 	id = fork();
 
 	if (id == 0)
 	{
-		if (execve(exec_args[0], exec_args, environ) == -1)
+		if (execve(args[0], args, environ) == -1)
 		{
 			perror(args[0]);
 			exit(127);
