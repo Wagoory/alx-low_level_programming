@@ -1,8 +1,8 @@
 #include "main.h"
 
-void *full_path(char **tokens)
+void full_path(char **tokens)
 {
-        char *path = get_pathtokens([0]);
+        char *path = get_path(tokens[0]);
 
         free(tokens[0]);
         tokens[0] = malloc(sizeof(path));
