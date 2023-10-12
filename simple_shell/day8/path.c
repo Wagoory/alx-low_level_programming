@@ -26,13 +26,13 @@ char *get_path(char *user_command)
 		if (access(buff, X_OK) == 0)
 		{
 			path = strdup(buff);
-			break;
+			return (path);
 		}
 		
 		token = strtok(NULL, ":");
 	}
 	free(dupl);
-	return (path);
+	return (NULL);
 }
 
 
