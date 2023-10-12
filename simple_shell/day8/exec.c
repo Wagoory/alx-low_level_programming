@@ -17,6 +17,8 @@ int exec(char **args, char *path)
 		if (execve(path, args, environ) == -1)
 		{
 			perror(args[0]);
+			free(args);
+			free(path);
 			exit(127);
 		}
 
