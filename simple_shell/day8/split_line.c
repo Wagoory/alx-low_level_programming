@@ -11,6 +11,11 @@ char **spilt_line(char *new_line)
 	if (args == NULL)
 		return (NULL);
 	token = strtok(new_line, del);
+	if (!token)
+	{
+		free(new_line);
+		return(NULL);
+	}
 	while (token != NULL)
 	{
 		args[len] = token;

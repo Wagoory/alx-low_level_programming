@@ -7,6 +7,10 @@ char *get_path(char *user_command)
 	char buff[256];
 	char *path = NULL;
 
+	if (strchr(user_command, '/') != NULL)
+	{
+		return (user_command);
+	}
 	if (current_path == NULL)
 		return (NULL);
 	
