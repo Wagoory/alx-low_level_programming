@@ -7,7 +7,7 @@ char *get_path(char *user_command)
 	char buff[256];
 	char *path = NULL;
 
-	if (current_path == NULL)
+	if (current_path == NULL || user_command == NULL)
 		return (NULL);
 	
 	dupl = strdup(current_path);
@@ -18,7 +18,7 @@ char *get_path(char *user_command)
 		strcpy(buff,token);
 		strcat(buff, "/");
 		strcat(buff, user_command);
-		if (access(buff, F_OK) == 0)
+		if (access(buff, X_OK) == 0)
 		{
 			path = strdup(buff);
 			break;
