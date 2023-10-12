@@ -10,6 +10,7 @@ char *get_path(char *user_command)
 	if (strchr(user_command, '/') != NULL)
 	{
 		path = strdup(user_command);
+		free(user_command);
 		return (path);
 	}
 	if (current_path == NULL)
