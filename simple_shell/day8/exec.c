@@ -35,13 +35,13 @@ int exec(char **args)
         if (execve(args[0], args, environ) == -1)
         {
             perror("execve");
-            exit(1); // Exit with an error code to indicate failure
+            exit(1); /* Exit with an error code to indicate failure*/
         }
     }
     else if (id < 0)
     {
         perror("fork");
-        exit(1); // Exit with an error code to indicate failure
+        exit(1); /* Exit with an error code to indicate failure*/
     }
     else
     {
