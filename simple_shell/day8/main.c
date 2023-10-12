@@ -24,6 +24,8 @@ int main(void)
 		if (full_path == NULL)
 		{
 			perror(tokens[0]);
+			free(tokens);
+			free(line);
 			continue;
 		}
 		/*tokens[0] = malloc(strlen(full_path) + 1);
