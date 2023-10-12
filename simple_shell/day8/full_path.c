@@ -11,5 +11,4 @@ void full_path(char **tokens)
         tokens[0] = malloc((length + 1) * sizeof(char));
 
         strcpy(tokens[0], path);
-        free(path);
 }
