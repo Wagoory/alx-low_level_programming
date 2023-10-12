@@ -20,16 +20,17 @@ int main(void)
 		}
 		tokens = spilt_line(line);
 		
-		full_path = get_path(tokens[0]);
+		/*full_path = get_path(tokens[0]);
 		free(tokens[0]);
 		tokens[0] = malloc(sizeof(full_path));
 
-		strcpy(tokens[0], full_path);
+		strcpy(tokens[0], full_path);*/
+
+		full_path(tokens);
 
 		status = exec(tokens);
 
 		free(tokens);
-		free(full_path);
 		free(line);
 	}
 

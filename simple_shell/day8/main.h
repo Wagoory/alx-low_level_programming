@@ -13,5 +13,5 @@ char **spilt_line(char *new_line);
 int exec(char **args);
 extern char **environ;
 char *get_path(char *user_command);
-
+void full_path(char **tokens);
 #endif
